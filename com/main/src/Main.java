@@ -3,9 +3,13 @@ public class Main {
 		
 		Matter me = new Matter();
 		Matter you = new Matter("you");
-		you.force=-me.force;
+		
+		me.myPosition = 10;
 		
 		while(me.imFine) {
+			me.force = me.myPosition - you.myPosition;
+			you.force=-me.force;
+			
 			me.updateAcceleration();
 			me.updateVelocity();
 			me.updatePosition();
@@ -13,8 +17,8 @@ public class Main {
 			me.updateEmotionalStatus();
 
 			you.updateAcceleration();
-			you.updateVelocity();
 			you.updatePosition();
+			you.updateVelocity();
 			System.out.println(you);
 			you.updateEmotionalStatus();
 		}
