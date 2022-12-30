@@ -11,8 +11,8 @@ public class Main {
 			you.force=-me.force;
 			
 			me.updateAcceleration();
-			me.updateVelocity();
 			me.updatePosition();
+			me.updateVelocity();
 			System.out.println(me);
 			me.updateEmotionalStatus();
 
