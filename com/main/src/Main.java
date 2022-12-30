@@ -1,14 +1,17 @@
 public class Main {
+	
+	public static double computeForce(Matter m1, Matter m2){
+		return m1.position - m2.position;
+	}
+	
 	public static void main(String[] args){
 		
 		Matter me = new Matter(10);
 		Matter you = new Matter("you");
 		
-		me.myPosition = 10;
-		
-		while(me.imFine) {
-			me.force = me.myPosition - you.myPosition;
-			you.force=-me.force;
+		while(me.isFine) {
+			me.force  = computeForce(me, you);
+			you.force = computeForce(you, me);
 			
 			me.updateAcceleration();
 			me.updatePosition();

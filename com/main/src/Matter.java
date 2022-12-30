@@ -1,44 +1,44 @@
 public class Matter {
 	
-	String myName;
-	boolean imFine = true;
-	double myPosition=0;
-	double myVelocity=0;
-	double myAcceleration=1;
+	String name;
+	boolean isFine = true;
+	double position =0;
+	double velocity =0;
+	double acceleration =1;
 	double force=1;
-	double myMass = 2;
+	double mass = 2;
 	
 	public Matter() {}
-	public Matter(double mass){
-		myMass = mass;
+	public Matter(double position){
+		this.position = position;
 	}
 	public Matter(String name){
-		myName = name;
+		this.name = name;
 	}
-	public Matter(String name, double mass) {
-		myName = name;
-		myMass = mass;
+	public Matter(String name, double position) {
+		this.name = name;
+		this.position = position;
 	}
 	
 	public void updatePosition(){
-		myPosition += myVelocity;
+		position += velocity;
 	}
 	public void updateVelocity(){
-		myVelocity += myAcceleration;
+		velocity += acceleration;
 	}
 	public void updateAcceleration(){
-		myAcceleration = force/myMass;
+		acceleration = force/ mass;
 	}
 	public void updateEmotionalStatus(){
-		if(myPosition>10) imFine = false;
+		if(position >10) isFine = false;
 	}
 	
 	public String toString(){
-		if(myName != null) {
-			if (imFine) return String.format("I (%s) am fine, my position: %s", myName, myPosition);
-			return String.format("I (%s) am not fine", myName);
+		if(name != null) {
+			if (isFine) return String.format("I (%s) am fine, my position: %s", name, position);
+			return String.format("I (%s) am not fine", name);
 		} else {
-			if (imFine) return String.format("I'm fine, my position: %s", myPosition);
+			if (isFine) return String.format("I'm fine, my position: %s", position);
 			return "I am not fine";
 		}
 	}
