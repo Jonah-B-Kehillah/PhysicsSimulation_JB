@@ -9,8 +9,15 @@ public class Matter {
 	double myMass = 2;
 	
 	public Matter() {}
+	public Matter(double mass){
+		myMass = mass;
+	}
 	public Matter(String name){
 		myName = name;
+	}
+	public Matter(String name, double mass) {
+		myName = name;
+		myMass = mass;
 	}
 	
 	public void updatePosition(){

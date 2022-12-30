@@ -1,7 +1,7 @@
 public class Main {
 	public static void main(String[] args){
 		
-		Matter me = new Matter();
+		Matter me = new Matter(10);
 		Matter you = new Matter("you");
 		
 		me.myPosition = 10;
