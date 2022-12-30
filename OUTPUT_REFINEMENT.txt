@@ -1,0 +1,4 @@
+I'm fine, my position: 10.0
+I (you) am fine, my position: 0.0
+I'm fine, my position: 15.0
+I (you) am fine, my position: -5.0
